@@ -68,16 +68,6 @@ jobs:
           ./gradlew test --info
         fi
 
-    - name: Upload artifacts
-      uses: actions/upload-artifact@v3
-      if: success()
-      with:
-        name: ModArtifacts-${{ github.event.inputs.build-type }}-${{ github.run_number }}
-        path: |
-          build/libs/*.jar
-          build/reports/tests/test/
-        retention-days: 5
-
     - name: Show build info
       run: |
         echo "构建类型: ${{ github.event.inputs.build-type }}"
