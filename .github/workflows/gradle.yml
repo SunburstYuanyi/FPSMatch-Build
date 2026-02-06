@@ -23,7 +23,7 @@ jobs:
 
       - name: JAR FILE
         if: success()  # 仅在构建成功时上传
-          uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v4
         with:
           name: mod-output
           path: build/libs/*.jar
