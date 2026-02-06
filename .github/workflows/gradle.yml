@@ -27,4 +27,4 @@ jobs:
         with:
           name: mod-output
           path: build/libs/*.jar
-          retention-days: 1  # 只保留1天
+          retention-days: 30
